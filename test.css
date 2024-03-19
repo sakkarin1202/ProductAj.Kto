@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D&display=swap');
+
+:root {
+  --green: #27ae60;
+  --black: #192a56;
+  --lightcolor: #666;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: 'K2D', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*Header Section*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+}
+
+header .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+header .flex .logo {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+header .flex .logo i {
+  color: var(--green);
+}
+
+header .flex .navbar a {
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: var(--lightcolor);
+}
+
+header .flex .navbar a.active,
+header .flex .navbar a:hover {
+  color: white;
+  background: var(--green);
+}
+
+header .flex .icons i,
+header .flex .icons a {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  width: 4.5rem;
+  text-align: center;
+  font-size: 1.7rem;
+  color: var(--black);
+  border-radius: 50%;
+  background: #eee;
+}
+
+header .flex .icons i:hover,
+header .flex .icons a:hover {
+  color: white;
+  background: var(--green);
+  transform: rotate(300deg);
+}
+
+header .flex .icons #menu-bars {
+  display: none;
+}
+/*Search Section*/
+#search-form {
+    position: fixed;
+    top: -110%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  
+  #search-form.active {
+    top: 0;
+  }
+  
+  #search-form #search-box {
+    width: 50rem;
+    border-bottom: 0.1rem solid white;
+    padding: 1rem 0;
+    color: white;
+    font-size: 3rem;
+    text-transform: none;
+    background: none;
+  }
+  
+  #search-form #search-box::placeholder {
+    color: white;
+  }
+  
+  #search-form label {
+    color: white;
+    cursor: pointer;
+    font-size: 3rem;
+  }
+  
+  #seaech-fotm label:hover {
+    color: var(--green);
+  }
+  
+  #search-form #close {
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+  }
+  
+  /*Home Section*/
+  .home .home-slider .slide {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 9rem;
+  }
+  
+  .home .home-slider .slide .content {
+    flex: 1 1 45rem;
+  }
+  
+  .home .home-slider .slide .image {
+    flex: 1 1 45rem;
+  }
+  
+  .home .home-slider .slide .image img {
+    width: 100%;
+  }
+  
+  .home .home-slider .slide .content span {
+    color: var(--green);
+    font-size: 2.5rem;
+  }
+  
+  .home .home-slider .slide .content h3 {
+    color: var(--black);
+    font-size: 7rem;
+  }
+  
+  .home .home-slider .slide .content p {
+    color: var(--lightcolor);
+    font-size: 2.2rem;
+    padding: 0.5rem 0;
+    line-height: 1.5;
+  }
+  
+  .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: white;
+    background: var(--black);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.8rem 3rem;
+  }
+  
+  .btn:hover {
+    background: var(--green);
+    letter-spacing: 0.1rem;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: var(--green);
+  }
+  
+  /*Dishes Section*/
+  .dishes .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35rem);
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  /*Add more styles related to dishes section if needed*/
+  
+  /*About Section*/
+  .about .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  /*Add more styles related to about section if needed*/
+  
+  /*Menu Section*/
+  .menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35rem);
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  /*Add more styles related to menu section if needed*/
+  
+  /*Review Section*/
+  .review .slide {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    position: relative;
+    margin-bottom: 4rem;
+  }
+  
+  /*Add more styles related to review section if needed*/
+  
+  /*Order Section*/
+  .order form {
+    max-width: 90rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    background: #fff;
+    padding: 1.5rem;
+    margin: 0 auto;
+    padding-top: 1rem;
+  }
+  
+  /*Add more styles related to order section if needed*/
+  
+  /*Footer Section*/
+  .footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /*Add more styles related to footer section if needed*/
+  
+  /*Loader Section*/
+  .loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .loader-container img {
+    width: 35rem;
+  }
+  
+  .loader-container.fade-out {
+    top: -110%;
+    opacity: 0;
+  }
+  
+  /*Media Query*/
+  @media (max-width: 768px) {
+    /* Add styles for responsive design */
+  }
+  
+  @media (max-width: 450px) {
+    html {
+      font-size: 50%;
+    }
+    .dishes .box-container .box img {
+      height: auto;
+      width: 100%;
+    }
+    .order form .inputBox .input {
+      width: 100%;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ทำให้รูปภาพ cover พื้นที่ */
+    border-radius: 50%; /* ทำให้มีเส้นโค้ง */
+    margin-top: 50px;
+}
+/* Add CSS styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

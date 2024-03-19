@@ -1,0 +1,115 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.product img {
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.product2 .img1{
+    width: 200px;
+    height: 300px;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product, .product2, .product3 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.product img, .product2 img, .product3 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-details {
+    flex-grow: 1;
+}
+
+.cart {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.cart h2 {
+    text-align: center;
+}
+
+.add-to-cart {
+    margin-bottom: 10px;
+    background-color: rgb(78, 212, 78);
+}
+
+.remove-from-cart {
+    background-color: rgb(198, 52, 52);
+}
+
+/* สไตล์สำหรับรายการในตะกร้า */
+.cart-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+/* สไตล์สำหรับชื่อสินค้า */
+.cart-item-name {
+    font-weight: bold;
+}
+
+/* สไตล์สำหรับรายละเอียดสินค้าในตะกร้า */
+.cart-item-details {
+    margin-top: 5px;
+}
+
+/* สไตล์สำหรับจำนวนสินค้า */
+.cart-item-quantity {
+    margin: 0;
+}
+
+/* สไตล์สำหรับราคาของสินค้าต่อชิ้น */
+.cart-item-price {
+    margin: 0;
+}
+
+/* สไตล์สำหรับราคารวมของสินค้า */
+.cart-item-total-price {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* สไตล์สำหรับราคารวมทั้งหมดของตะกร้า */
+.cart-total-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button {
+    background-color: navy;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+}

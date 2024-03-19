@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Print Receipt</title>
+  <!--PDF-lib library-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <!--CSS ของ Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <!-- เพื่อลดเวลาในการโหลดฟอนต์-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- เพื่อให้เบราว์เซอร์สามารถเตรียมการโหลดข้อมูลล่วงหน้าได้-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!--โยงไปยังไฟล์ CSS ของฟอนต์ที่เลือกใช้จาก Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=K2D&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="test.css" />
+</head>
+
+<body>
+  <!--Header Section-->
+  <header>
+    <section class="flex">
+      <a href="#" class="logo"><i class="fas fa-clock"></i>Watch</a>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#dishes">Dishes</a>
+        <a href="#about">About</a>
+        <a href="#order">Product</a>
+      </nav>
+      <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart" id="cart-icon" data-count="0"></a>
+        <!-- Add data-count attribute -->
+      </div>
+    </section>
+  </header>
+
+  <!--Product Section-->
+  <div class="container">
+    <section class="menu" id="menu">
+      <h3 class="sub-heading">Our Products</h3>
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="images/watch-1.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Stylish Watch</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button class="btn add-to-cart" data-product-id="1" data-price="299.99">
+              add to cart
+            </button>
+            <span class="price">299.99฿</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/watch-2.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Elegant Watch</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button class="btn add-to-cart" data-product-id="2" data-price="199.99">
+              add to cart
+            </button>
+            <span class="price">199.99฿</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/watch-3.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Classic Watch</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button class="btn add-to-cart" data-product-id="3" data-price="249.99">
+              add to cart
+            </button>
+            <span class="price">249.99฿</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/watch-4.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Sporty Watch</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button class="btn add-to-cart" data-product-id="4" data-price="349.99">
+              add to cart
+            </button>
+            <span class="price">349.99฿</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/watch-5.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Luxury Watch</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button class="btn add-to-cart" data-product-id="5" data-price="889.99">
+              add to cart
+            </button>
+            <span class="price">899.99฿</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/watch-6.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Fashion Watch</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button class="btn add-to-cart" data-product-id="6" data-price="159.99">
+              add to cart
+            </button>
+            <span class="price">159.99฿</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/watch-7.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Smart Watch</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button class="btn add-to-cart" data-product-id="7" data-price="349.99">
+              add to cart
+            </button>
+            <span class="price">349.99฿</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/watch-8.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Dress Watch</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button class="btn add-to-cart" data-product-id="8" data-price="219.99">
+              add to cart
+            </button>
+            <span class="price">219.99฿</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/watch-9.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Business Watch</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button class="btn add-to-cart" data-product-id="9" data-price="399.99">
+              add to cart
+            </button>
+            <span class="price">399.99฿</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/watch-10.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Casual Watch</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button class="btn add-to-cart" data-product-id="10" data-price="129.99">
+              add to cart
+            </button>
+            <span class="price">129.99฿</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <button class="print-receipt">
+        <i class="fas fa-receipt"></i> Print Receipt
+      </button>
+    </div>
+  </div>
+  <script src="pdf-lib.js"></script>
+  <script src="cart.js"></script>
+</body>
+
+</html>
